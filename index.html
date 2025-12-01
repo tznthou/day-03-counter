@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; script-src 'self' 'unsafe-inline';">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="步數記錄器">
+    <title>日常步數記錄器</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-192.png">
+</head>
+<body>
+    <div class="counter-container">
+        <h1>日常步數記錄器</h1>
+        <div id="counter-display" class="counter-display">0</div>
+        <div class="button-group">
+            <button id="decrement" class="counter-btn"><i class="fa-solid fa-minus"></i></button>
+            <button id="reset" class="counter-btn"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+            <button id="increment" class="counter-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <button id="toggle-auto-count" class="auto-count-btn"><i class="fa-solid fa-person-running"></i> 自動計步</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // 註冊 Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js');
+            });
+        }
+    </script>
+</body>
+</html> 

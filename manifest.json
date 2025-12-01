@@ -1,0 +1,24 @@
+{
+  "name": "日常步數記錄器",
+  "short_name": "步數記錄器",
+  "description": "簡單易用的步數計數工具",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["health", "fitness", "productivity"],
+  "lang": "zh-TW"
+} 
